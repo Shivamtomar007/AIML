@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .joke-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .joke-container button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .joke-container button:hover {
+            background-color: #45a049;
+        }
+        .joke-container .clear-btn {
+            background-color: #f44336;
+        }
+        .joke-container .clear-btn:hover {
+            background-color: #e53935;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="joke-container">
+        <h2>Joke Generator</h2>
+        <p id="joke">Click the button to generate a joke!</p>
+        <p id="charCount"></p>
+        <button onclick="generateJoke()">Generate Joke</button>
+        <button class="clear-btn" onclick="clearJoke()">Clear</button>
+    </div>
+
+    <script>
+        const jokes = [
+            "Why don't scientists trust atoms? Because they make up everything!",
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "Why don't skeletons fight each other? They don't have the guts.",
+            "What do you call fake spaghetti? An impasta!"
+        ];
+
+        function generateJoke() {
+            const joke = jokes[Math.floor(Math.random() * jokes.length)];
+            document.getElementById('joke').innerText = joke;
+            document.getElementById('charCount').innerText = `Character count: ${joke.length}`;
+        }
+
+        function clearJoke() {
+            document.getElementById('joke').innerText = '';
+            document.getElementById('charCount').innerText = '';
+        }
+    </script>
+</body>
+</html>
