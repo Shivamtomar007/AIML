@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+    </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type ="text/babel">
+        // const parent = document.getElementById("parent")
+        // const h1 = document.createElement("h1");
+        // h1.textContent = "hello React";
+        // parent.appendChild(h1)
+        // const ul = document.createElement("ul")
+        // const item1 = document.createElement("li")
+        // item1.textContent = "item1"
+        // const item2 = document.createElement("li")
+        // item2.textContent = "item2"
+        // ul.appendChild(item1)
+        // ul.appendChild(item2)
+        // parent.appendChild(ul)
+        ///React Used
+        // const parent = document.getElementById("parent");
+        // const root = ReactDOM.createRoot(parent)
+        // const h1 = React.createElement("h1",{},"My React Heading");
+        // // root.render(h1);
+        // const item1 = React.createElement("li",{},"item1");
+        // const item2  = React.createElement("li",{},"item2");
+        // const ul = React.createElement("li",{},item1,item2);
+        // root.render([h1,ul]);
+///Babel Used to simplify the code of the html
+ 
+const parent = document.getElementById("parent");
+ const root = ReactDOM.createRoot(parent)
+ const h1 = <h1>React CDN </h1>
+ root.render(h1)
+
+ const h1 = <h1>MY SHOPPING LIST </h1>
+ const item1 = <li> Hello </li>
+ const item2 = <li> Hi</li>
+ const ul = (<ul>{item1}{item2} </ul>);
+ const container = <div>
+    {h1}{ul}
+        </div>
+        root.render(container);
+    </script>
+   
+</body>
+</html>
