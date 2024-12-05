@@ -1,0 +1,17 @@
+.aa{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-evenly;
+   
+
+}
+ul{
+    list-style-type: none;
+
+}
+.a{
+    text-decoration: none;
+    color:blueviolet;
+    font-size:36px;
+    text-transform: capitalize;
+}
